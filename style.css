@@ -1,4 +1,4 @@
-@import url("Lora-VariableFont_wght.ttf");
+@import url('Lora-VariableFont_wght.ttf');
 *,
 *::before,
 *::after {
@@ -14,20 +14,21 @@ body {
 
 .hamburger {
     width: fit-content;
-    top: 20px;
-    left: 20px;
-    height: fit-content;
+    top: 2px;
+    left: 2px;
     border: solid 2px white;
-    position: relative;
+    position: absolute;
     cursor: pointer;
+    padding: 2px;
     background-color: #f1f3ee;
-    font-size: 2rem;
-    color: #90585A;
+    font-size: 20px;
+    color: #90585a;
     font-style: italic;
+    display: none;
 }
 
 .hamburger:hover {
-    background-color: #90585A;
+    background-color: #90585a;
     color: #f1f3ee;
 }
 
@@ -37,20 +38,28 @@ body {
     font-size: 1.2em;
     background-color: #f1f3ee;
     padding: 20px;
-    color: #90585A;
+    color: #90585a;
     position: relative;
     align-items: center;
 }
 
 .nav-item>a {
-    color: #90585A;
+    color: #90585a;
     text-decoration: none;
+}
+
+.nav-item>a:hover {
+    background-color: #90585a;
+    border-radius: 4px;
+    padding: 3px;
+    color: #f1f3ee;
+    transition: all linear 0.4s;
 }
 
 .header {
     color: #f1f3ee;
     position: relative;
-    background-color: #90585A;
+    background-color: #90585a;
 }
 
 .title {
@@ -63,70 +72,70 @@ body {
     position: relative;
     font-weight: bolder;
     font-style: italic;
-    text-decoration: underline #A29975;
+    text-decoration: underline #a29975;
     width: fit-content;
 }
 
 .span-t {
-    color: #A29975;
+    color: #a29975;
     text-decoration: double underline #f1f3ee;
     color: transparent;
-    -webkit-text-stroke: 1px #A29975;
+    -webkit-text-stroke: 1px #a29975;
     animation: fills 3s linear 2s infinite;
 }
 
 .section1 {
-    background-color: #90585A;
+    background-color: #90585a;
     width: 100vw;
-    height: 90vh;
+    height: 500px;
 }
 
 .sec1 {
     width: 90%;
-    height: 90%;
+    height: 500px;
     position: relative;
     top: 2%;
     margin: 0 auto;
     display: flex;
-    background-color: #A29975;
+    justify-content: space-between;
 }
 
 .image-card {
     display: flex;
     top: 2.5%;
-    position: relative;
-    width: 800px;
-    height: 95%;
+    width: 400px;
+    height: 470px;
     overflow: hidden;
-    left: 1%;
+    z-index: 90;
 }
 
 .img-cont {
     display: flex;
+    border-radius: 5px;
 }
 
 .img-cont>img {
-    width: 800px;
-    position: relative;
-    height: 500px;
+    width: 400px;
+    margin-top: 1%;
+    border-radius: 5px;
     object-fit: cover;
-    height: 99%;
-    border-top: 5px solid #90585A;
-    border-bottom: 5px solid #90585A;
+    height: 450px;
+    border-top: 5px solid #90585a;
+    border-bottom: 5px solid #90585a;
 }
 
 .hero-text {
-    width: 40%;
-    position: absolute;
+    width: 55%;
     right: 0;
+    border-radius: 5px;
+    height: 470px;
     background-color: aliceblue;
     height: 100%;
 }
 
 .h-head {
     z-index: 40;
-    position: absolute;
-    color: #90585A;
+    color: #90585a;
 }
 
 .h-text {
@@ -145,9 +154,6 @@ body {
 
 .h-text>img {
     width: 100%;
-    height: 70vh;
-    position: absolute;
-    top: 0;
     opacity: 0.2;
     z-index: 1;
 }
@@ -180,16 +186,18 @@ body {
 
 .bttn:hover {
     background-color: transparent;
-    color: #90585A;
-    border: 2px solid #90585A;
+    color: #90585a;
+    border: 2px solid #90585a;
     transform: scale(1.1);
     transition-delay: 0.1s;
     transition-duration: 0.5s;
 }
 
 .section2 {
-    background-color: #A29975;
+    background-color: aliceblue;
     position: relative;
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 .gol2 {
@@ -208,8 +216,9 @@ body {
 .section3 {
     background-color: #f1f3ee;
     background-image: url(Whangaehu.png);
-    height: 100vh;
+    height: fit-content;
     position: relative;
+    padding-bottom: 60px;
 }
 
 .pattern1 {
@@ -229,7 +238,7 @@ body {
 .opt {
     font-style: italic;
     opacity: 0.8;
-    border: solid 2px #90585A;
+    border: solid 2px #90585a;
     font-weight: bold;
     border-right: none;
 }
@@ -237,21 +246,16 @@ body {
 .opts {
     font-style: italic;
     opacity: 0.8;
-    border: solid 2px #90585A;
+    border: solid 2px #90585a;
     font-weight: bold;
     border-left: none;
-}
-
-.section3 {
-    height: 90vh;
-    padding-bottom: 20px;
 }
 
 .container-fluid {
     height: fit-content;
     background-color: #f1f3ee;
     font-size: 1.4rem;
-    color: #90585A;
+    color: #90585a;
     list-style-type: none;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -260,7 +264,7 @@ body {
 .intro>p {
     font-size: 2rem;
     font-weight: bold;
-    color: #90585A;
+    color: #90585a;
     font-family: lora;
     text-align: center;
     margin-left: 20px;
@@ -276,7 +280,7 @@ body {
 .head {
     line-height: 0.8rem;
     height: 25vh;
-    filter: drop-shadow(2px 5px 5px #90585A);
+    filter: drop-shadow(2px 5px 5px #90585a);
     background-color: #f1f3ee;
     padding-top: 20px;
     padding-left: 20px;
@@ -295,21 +299,21 @@ body {
 }
 
 .section4 {
-    background-color: #A29975;
+    background-color: aliceblue;
     height: fit-content;
     width: 100vw;
     position: relative;
 }
 
 .gallery3 {
-    padding: 15px;
+    padding: 5px;
 }
 
 .gol3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -345,7 +349,7 @@ body {
 
 .gol3>.pic:hover .capt {
     display: block;
-    border: solid 2px #90585A;
+    border: solid 2px #90585a;
     transition-duration: 1s;
     transform: translateY(0);
     transition: linear;
@@ -361,23 +365,21 @@ body {
     width: 23vw;
     transform: translateY(-100%);
     text-align: center;
-    color: #A29975;
+    color: #a29975;
     transition: all 500ms ease-in;
     border-radius: 2px;
-    border: solid 1px #90585A
+    border: solid 1px #90585a;
 }
 
 .seccard {
     background-color: #f1f3ee;
-    color: #90585A;
-    height: 98vh;
-    border-bottom: 10px solid #a2997586;
+    color: #90585a;
+    height: fit-content;
 }
 
 .reviews {
     text-align: center;
     padding-top: 50px;
-    height: 120vh;
 }
 
 .card {
@@ -394,7 +396,7 @@ body {
 }
 
 .bttns {
-    background-color: #90585A;
+    background-color: #90585a;
     border: double 1px white;
     color: white;
     margin-top: 20px;
@@ -434,22 +436,23 @@ body {
 .cardtext {
     width: 25vw;
     background-color: rgba(255, 255, 255, 0.575);
-    color: #90585A;
+    color: #90585a;
     border-radius: 10px;
     padding: 25px;
     box-shadow: 2px 2px 1px 1px #fff;
 }
 
 .section6 {
-    border: brown 5px solid;
+    height: fit-content;
+    background-color: #90585a;
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 
 .sec6 {
-    position: absolute;
     font-size: 1.5em;
-    color: #90585A;
     font-family: lora;
-    height: 60vh;
+    height: fit-content;
     width: 100vw;
     background-color: #f1f3ee;
     display: flex;
@@ -483,7 +486,6 @@ body {
     height: 400px;
     justify-content: space-around;
     animation: rot 30s linear 1s infinite;
-    border: solid 2pxyyyyyyyy;
 }
 
 .img6-cont:hover {
@@ -518,7 +520,7 @@ form {
 .submit {
     background-color: #90585a;
     border-radius: 5px;
-    border: 1px solid #90585A;
+    border: 1px solid #90585a;
     color: #f1f3ee;
     font-size: 1.5rem;
     font-weight: bold;
@@ -529,7 +531,7 @@ form {
 
 .submit:hover {
     background-color: transparent;
-    color: #90585A;
+    color: #90585a;
     transition: linear;
     transition-duration: 1s;
     transition-delay: 0.5s;
@@ -545,13 +547,13 @@ form {
 }
 
 .subscribe {
-    background-color: #90585A;
+    background-color: #90585a;
     color: #fff;
 }
 
 .subscribe:hover {
     background-color: #f1f3ee;
-    border: 2px solid #90585A;
+    border: 2px solid #90585a;
     color: #90585a;
     transition: linear;
     transition-duration: 1s;
@@ -560,7 +562,7 @@ form {
 
 .news {
     background-color: #f1f3ee;
-    color: #90585A;
+    color: #90585a;
 }
 
 .news,
@@ -568,7 +570,48 @@ form {
     padding: 3px;
     border-radius: 5px;
     outline: none;
-    border: #90585A 2px solid;
+    border: #90585a 2px solid;
+}
+
+.footer {
+    height: fit-content;
+    background-color: #90585a;
+    color: aliceblue;
+    font-family: lora, serif;
+    padding-bottom: 40px;
+}
+
+.section5 {
+    background-color: #90585a;
+    font-size: 1.1rem;
+    color: aliceblue;
+    height: fit-content;
+}
+
+.foot-icons,
+.contact-text {
+    border-bottom: solid 1px grey;
+    padding-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    color: aliceblue;
+}
+
+.icon:hover {
+    transform: rotate(1080deg);
+    transition-duration: 800ms;
+}
+
+.contact-text {
+    border-bottom: aliceblue;
+    padding-bottom: 20px;
+    width: 100%;
 }
 
 @keyframes rot {
@@ -591,11 +634,28 @@ form {
 
 @keyframes fills {
     to {
-        color: #A29975;
+        color: #a29975;
     }
 }
 
-@media screen and (max-width:850px) {
+@media screen and (max-width: 850px) {
+    .sec1 {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+    .hamburger {
+        display: block;
+    }
+    .section1 {
+        height: fit-content;
+        padding-bottom: 40px;
+    }
+    .hero-text {
+        width: 100%;
+        height: 40%;
+    }
     .section2 {
         height: fit-content;
     }
@@ -621,18 +681,18 @@ form {
     .pics1>img {
         width: 48vw;
         height: 40vw;
-        margin-top: 0
+        margin-top: 0;
     }
     .capt {
         width: 30vw;
     }
     .section3 {
-        height: 150vh;
+        height: fit-content;
     }
     .head {
         font-size: 1.2rem;
-        line-height: 0.4rem;
-        height: fit-content;
+        line-height: 1.2rem;
+        height: 320px;
         border-radius: 5px;
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -645,23 +705,21 @@ form {
         height: fit-content;
     }
     .section6 {
-        height: 200vh;
+        height: fit-content;
     }
     .sec6 {
         display: flex;
-        height: 130vh;
+        height: fit-content;
         font-size: 1.2rem;
         flex-direction: column;
-        border: solid 2px #90585A;
         align-items: center;
         justify-content: center;
     }
     .reviews {
-        height: 120vh;
+        height: fit-content;
     }
     .form {
         width: fit-content;
-        border: solid 2px #90585A;
     }
     .form>input {
         width: 80vw;
@@ -678,13 +736,13 @@ form {
         display: flex;
         transform: translateX(-110%);
         position: fixed;
-        top: 40px;
+        top: 70px;
         z-index: 400;
         width: 90vw;
         height: 30vh;
         left: 0;
         transition: linear;
-        transition-duration: 2s;
+        transition-duration: 0.3s;
         background-color: aliceblue;
         margin-left: 5vw;
     }
@@ -695,11 +753,102 @@ form {
     .show {
         transform: translateX(0);
         transition: linear;
-        transition-duration: 2s;
+        transition-duration: 0.6s;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .card1 {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .cardtext {
+        width: 70%;
+    }
+    .reviews {
+        height: fit-content;
+    }
+    .last-pic {
+        margin-top: 50px;
+    }
+    .pic1>img {
+        width: 90%;
+        height: 300px;
+        margin-bottom: 50px;
+        margin-left: 5%;
     }
 }
 
-@media screen and (min-width:850px) {}
-
-
+@media screen and (max-width: 380px) {
+    .title {
+        font-size: 27px;
+    }
+    .hero-text {
+        margin-top: 30px;
+    }
+    .h-head {
+        font-size: 20px;
+    }
+    .image-card {
+        display: flex;
+        top: 2.5%;
+        width: 100vw;
+        height: 470px;
+        overflow: scroll;
+        z-index: 90;
+    }
+    .img-cont>img {
+        width: 100vw;
+        margin-top: 1%;
+        border-radius: 5px;
+        object-fit: cover;
+        height: 450px;
+        border-top: none;
+        border-bottom: none;
+    }
+    .gallery3,
+    .gol3 {
+        height: 200vh;
+    }
+    .gol3>.pic {
+        width: 50%;
+    }
+    .gol3>.pic>img {
+        height: 150px;
+        width: 90%;
+    }
+    .capt {
+        width: 80%;
+        margin: 0;
+    }
+    .pic1>img {
+        width: 90%;
+    }
+    .sec6-img {
+        padding-top: 30px;
+    }
+    .img6-cont>img {
+        width: 120px;
+        height: 120px;
+    }
+    .img6-cont {
+        width: 250px;
+        height: 250px;
+    }
+    .contact-text {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .location {
+        margin-bottom: 30px;
+        border-bottom: solid 1px rgba(240, 248, 255, 0.719);
+    }
 }
